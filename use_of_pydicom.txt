@@ -1,0 +1,13 @@
+Pydicom usage. The following packages can be used with pydicom:
+  1. GDCM - this is the package that supports most compressed formats. (conda-forge has this package)
+  
+  2. Pillow, ideally with jpeg and jpeg2000 plugins. Build options may needed. Command example:
+         $ python3 -m pip install --upgrade Pillow --global-option="build_ext" --global-option="--enable-[feature]"
+     For more details. See: https://pillow.readthedocs.io/en/latest/installation.html#external-libraries
+  
+  3. jpeg_ls (conda-forge charls)
+  
+  4. pylibjpeg, with the -libjpeg, -openjpeg and -rle plugins. Command:
+         $ pip install pylibjpeg[libjpeg,openjpeg,rle]
+     OR:
+         $ pip install pylibjpeg[all]
